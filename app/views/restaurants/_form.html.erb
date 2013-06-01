@@ -1,0 +1,8 @@
+<%= simple_form_for @restaurant , html: {class: "form-horizontal"} do |f| %>
+  <%= f.input :name, label: "Name" %>
+  <%= f.input :address %>
+  <%= f.input :city %>
+  <%= f.input :state %>
+  <%= f.input :zip_code %>
+  <%= f.button :submit, value:"Add new restaurant", class:"btn-primary" %>
+<% end %>

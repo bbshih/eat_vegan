@@ -6,8 +6,9 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
 gem 'bootstrap-sass', '~> 2.3.1.0'
+gem 'simple_form'
+gem 'country_select'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -27,8 +28,11 @@ group :test, :development do
   gem 'pry-debugger'
   gem 'rspec-rails', '~>2.11'
   gem 'better_errors'
-  gem 'annotate'
   gem 'meta_request'
+end
+
+group :development do
+  gem 'annotate', ">=2.5.0"
 end
 
 group :test do
