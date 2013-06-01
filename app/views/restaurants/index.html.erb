@@ -1,5 +1,10 @@
 <h1>EatVegan <small>Find vegan friendly food anywhere</small></h1>
+<ul>
+  <% @restaurants.each do |restaurant| %>
+  <li><%= link_to restaurant.name, restaurant %></li>
+  <% end %>
+</ul>
+
 <h2>Add a restaurant</h2>
 <p>Help grow our directory by adding your favorite vegan friendly restaurants</p>
 <%= render "form" %>
-

@@ -2,6 +2,7 @@ class RestaurantsController < ApplicationController
   before_filter :find_restaurant, only: [:edit, :show, :update, :destroy]
 
   def index
+    @restaurants = Restaurant.all
     @restaurant = Restaurant.new
   end
 
@@ -19,9 +20,6 @@ class RestaurantsController < ApplicationController
     end
   end
 
-  def edit
-  end
-
   def update
     if @restaurant.update_attributes(params[:restaurant])
       redirect_to @restaurant, notice: "Changes saved"
@@ -30,11 +28,24 @@ class RestaurantsController < ApplicationController
     end
   end
 
+  def destroy
+    @restaurant.destroy
+    redirect_to restaurants_path, notice: "Restaurant deleted"
+  end
+
+  def edit
+  end
+
   def show
   end
+
+
 
   private
   def find_restaurant
     @restaurant = Restaurant.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      flash[:alert] = "The restaurant you were looking for could not be found."
+      redirect_to restaurants_path
   end
 end
