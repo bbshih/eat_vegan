@@ -14,4 +14,6 @@
 
 class Restaurant < ActiveRecord::Base
   attr_accessible :address, :city, :name, :state, :zip_code
+  validates :city, :address, :state, :name, :zip_code, presence: true
+  validates :zip_code, length: {is: 5}, numericality: { only_integer: true }
 end
