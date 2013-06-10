@@ -9,6 +9,11 @@ Bus apps made it possible for me to learn to ride the bus and make it easier to 
 ## How this was implemented
 Created CRUD from scratch and implemented bootstrap and simple forms. I need to create more tests but otherwise it's working nicely.
 
+
+## Facebook login working:
+![logged in](login.png)
+![not logged in](main.png)
+
 ---
 Uncopyright
 
