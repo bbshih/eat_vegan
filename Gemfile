@@ -11,6 +11,8 @@ gem 'bootstrap-sass', '~> 2.3.1.0'
 gem 'simple_form'
 gem 'country_select'
 
+
+gem 'omniauth-facebook', '1.4.0'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -30,6 +32,7 @@ group :test, :development do
   gem 'rspec-rails', '~>2.11'
   gem 'better_errors'
   gem 'meta_request'
+  gem 'dotenv-rails'
 end
 
 group :development do
