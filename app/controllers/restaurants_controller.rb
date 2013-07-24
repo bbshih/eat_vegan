@@ -1,4 +1,5 @@
 class RestaurantsController < ApplicationController
+  before_filter :authenticate_user!
   before_filter :find_restaurant, only: [:edit, :show, :update, :destroy]
 
   def index
